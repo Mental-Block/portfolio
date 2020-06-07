@@ -1,0 +1,9 @@
+POST  http://localhost:5000/cards/
+Content-Type: application/json 
+
+{
+    "title" : "Portfolio v:0",
+    "year" : "2019",
+    "githubURL" : "https://github.com/Mental-Block/oldPortfolio/",
+    "netlifyURL": "https://aaronsoldportfolio.netlify.app/",
+}

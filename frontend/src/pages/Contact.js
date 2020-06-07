@@ -18,7 +18,8 @@ export const Contact = () => {
 
   const submit = async (data, e) => {
     e.target.reset();
-    await fetch(window.location.href, {
+
+    await fetch("/contact/", {
       mode: "cors",
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (path, options) => {
+export const useFetch = (url, options) => {
   const [state, setState] = useState({ data: null, loading: true });
   useEffect(() => {
     setState({ data: null, loading: true });
-    fetch(`${window.location.origin}/${path}`, options)
+    fetch(url, options)
       .then((res) => res.json())
       .then((res) => setState({ data: res, loading: false }));
-  }, [path, options, setState]);
+  }, [url, options, setState]);
 
   return state;
 };

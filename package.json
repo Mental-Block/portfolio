@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "heroku-postbuild": "cd frontend && npm i && npm run build && cd ../backend && npm i",
-    "start": "cd backend node server.js"
+    "start": "cd backend && node server.js"
   },
   "repository": {
     "type": "git",

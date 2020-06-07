@@ -12,9 +12,7 @@ import {
 import { StyledTitle, StyledLoadingText } from "../components/css/Text";
 
 export const Archive = () => {
-  const { data, loading } = useFetch(
-    `https://${window.location.origin}/cards/`
-  );
+  const { data, loading } = useFetch(`${window.location.origin}/cards/`);
 
   return (
     <>

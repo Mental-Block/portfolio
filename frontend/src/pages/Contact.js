@@ -19,7 +19,7 @@ export const Contact = () => {
   const submit = async (data, e) => {
     e.target.reset();
 
-    await fetch(`https://${window.location.origin}/contact/`, {
+    await fetch(`${window.location.origin}/contact/`, {
       mode: "cors",
       method: "POST",
       headers: { "Content-Type": "application/json" },

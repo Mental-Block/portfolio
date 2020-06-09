@@ -1,9 +1,5 @@
 # portfolio
 
-## breif discription:
-
-A simple display of all the projects I am proud of.  
-
 ## run locally: 
 
 FROM ROOT:
@@ -12,4 +8,5 @@ FROM ROOT:
  
  frontend: 
  - cd frontend && npm i && npm start 
-
+ 
+Note: by defualt as there is no database connected to the application as it is an .env so fetching Data... will be the defualt response.    

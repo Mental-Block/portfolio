@@ -6,7 +6,7 @@ import { StyledLoadingText } from "../components/css/Text";
 import { flexSpace } from "../components/css/Layout";
 
 export const OtherCards = () => {
-  const { data, loading } = useFetch("cards/other");
+  const { data, loading } = useFetch("/cards/other");
   return (
     <>
       {loading ? (
@@ -19,7 +19,7 @@ export const OtherCards = () => {
 };
 
 export const FeaturedCards = () => {
-  const { data, loading } = useFetch("cards/featured");
+  const { data, loading } = useFetch("/cards/featured");
   return (
     <>
       {loading ? (

@@ -12,15 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`server started on port: ${PORT}`));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../", "frontend", "build")));
-
-  app.get("/", (req, res) => {
-    res.sendFile(__dirname, "../", "frontend", "build", "index.html");
-  });
+  console.log(path.join(__dirname, "../", "frontend", "build"));
 }
 
 app.use("/contact", require("./routes/emailRoutes"));

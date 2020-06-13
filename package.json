@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Mental-Block/portfolio/issues"
   },
-  "homepage": "https://github.com/Mental-Block/portfolio#readme"
+  "homepage": "https://github.com/Mental-Block/portfolio#readme",
+  "routes": {
+    "/build/*": "cd frontend && /build/",
+    "/**": "index.html"
+  }
 }

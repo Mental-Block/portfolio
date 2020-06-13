@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Mental-Block/portfolio#readme",
   "routes": {
-    "/build/*": "/build/",
+    "/build/*": "/frontend/build/",
     "/**": "index.html"
   }
 }

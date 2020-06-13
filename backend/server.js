@@ -23,7 +23,6 @@ if (process.env.NODE_ENV === "production") {
         path.join(__dirname, "../", "frontend", "build", "index.html")
       );
     });
-  });
 }
 
 app.use("/contact", require("./routes/emailRoutes"));

@@ -47,12 +47,8 @@ router.post("/", async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        type: "OAuth2",
         user: process.env.EMAIL,
-        clientId: process.env.CLIENTID,
-        clientSecret: process.env.SECRET,
-        refreshToken: process.env.REFRESHTOKEN,
-        accessToken: process.env.ACCESSTOKEN,
+        pass: process.env.PASSWORD,
       },
     });
 

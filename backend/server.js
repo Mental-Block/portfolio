@@ -29,7 +29,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //set up mongoose
-
 console.log("connecting to MongoDb");
 mongoose.connect(
   process.env.MONGODB_URI,

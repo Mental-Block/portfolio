@@ -18,6 +18,7 @@ export const Contact = () => {
 
   const submit = async (data, e) => {
     e.target.reset();
+    e.preventDefault();
 
     await fetch("/contact/", {
       mode: "cors",

@@ -35,6 +35,7 @@ router.post("/", async (req, res) => {
       .run(req);
 
   const error = validationResult(req);
+
   if (!error.isEmpty()) {
     return res.status(422).json({
       err:
@@ -62,16 +63,12 @@ router.post("/", async (req, res) => {
       text: `${message}`,
     };
 
-    transporter.sendMail(mailOptions, (err, res) => {
-      if (err) {
-        return res.status(500).json({
-          message: "Something went wrong on the server",
-        });
-      } else {
-        return res
-          .status(200)
-          .json({ message: "Message Sent well get back to you soon!" });
-      }
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) return res.status(500).json({ message: { error } });
+
+      return res
+        .status(200)
+        .json({ message: "Message Sent well get back to you soon!" });
     });
   }
 });

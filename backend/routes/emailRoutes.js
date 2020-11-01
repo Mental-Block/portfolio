@@ -60,7 +60,7 @@ router.post("/", async (req, res) => {
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
-      if (error) return res.status(500).json({ message: { error } });
+      if (error) return res.status(500).json({ message: error });
 
       return res
         .status(200)

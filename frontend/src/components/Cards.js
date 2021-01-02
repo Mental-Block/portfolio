@@ -1,64 +1,34 @@
 import React from "react";
-import { useFetch } from "./use/useFetch";
 
 import styled from "styled-components";
-import { StyledLoadingText } from "../components/css/Text";
 import { flexSpace } from "../components/css/Layout";
 
-export const OtherCards = () => {
-  const { data, loading } = useFetch("/cards/other");
-  return (
-    <>
-      {loading ? (
-        <StyledLoadingText>Fetching Data...</StyledLoadingText>
-      ) : (
-        <Cards props={data} />
-      )}
-    </>
-  );
+const Cards = ({...props}) => {
+  return(
+<StyledCardContainer>
+    {props.data.map((card) => (
+        <StyledCard key={card._id}>
+          <StyledCardTitleContainer>
+            <StyledCardTitle>{card.title}</StyledCardTitle>
+            <StyledCardIconContainer>
+              <a target="blank" href={card.githubURL}>
+                <StyledCardIcon src="images/github.svg" />
+              </a>
+
+              <a target="blank" href={card.netlifyURL}>
+                <StyledCardIcon src="images/external-link.svg" />
+              </a>
+            </StyledCardIconContainer>
+          </StyledCardTitleContainer>
+          <StyledCardImg src={card.img} />
+          <StyledCardText>{card.description}</StyledCardText>
+        </StyledCard>
+      ))}
+  </StyledCardContainer>)
 };
 
-export const FeaturedCards = () => {
-  const { data, loading } = useFetch("/cards/featured");
-  return (
-    <>
-      {loading ? (
-        <StyledLoadingText>Fetching Data...</StyledLoadingText>
-      ) : (
-        <Cards props={data} />
-      )}
-    </>
-  );
-};
+export default Cards;
 
-const Cards = ({ props }) => {
-  const Cards = props.map((card) => {
-    return (
-      <StyledCard key={card._id}>
-        <StyledCardTitleContainer>
-          <StyledCardTitle>{card.title}</StyledCardTitle>
-          <StyledCardIconContainer>
-            <a target="blank" href={card.githubURL}>
-              <StyledCardIcon src="images/github.svg" />
-            </a>
-
-            <a target="blank" href={card.netlifyURL}>
-              <StyledCardIcon src="images/external-link.svg" />
-            </a>
-          </StyledCardIconContainer>
-        </StyledCardTitleContainer>
-        <StyledCardImg src={card.img} />
-        <StyledCardText>{card.description}</StyledCardText>
-      </StyledCard>
-    );
-  });
-
-  return (
-    <>
-      <StyledCardContainer>{Cards} </StyledCardContainer>
-    </>
-  );
-};
 
 const StyledCard = styled.div`
   box-shadow: 0px 0px 2px ${(props) => props.theme.primaryC},

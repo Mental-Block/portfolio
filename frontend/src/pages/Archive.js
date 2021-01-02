@@ -1,5 +1,4 @@
 import React from "react";
-import { useFetch } from "../components/use/useFetch";
 
 // css
 import styled, { ThemeProvider } from "styled-components";
@@ -9,10 +8,11 @@ import {
   StyledPageWrapper,
   StyledCenterContainer,
 } from "../components/css/Layout";
-import { StyledTitle, StyledLoadingText } from "../components/css/Text";
+import { StyledTitle } from "../components/css/Text";
+
+import cardData from "../cardData.json"
 
 export const Archive = () => {
-  const { data, loading } = useFetch("/cards/");
 
   return (
     <>
@@ -21,11 +21,7 @@ export const Archive = () => {
           <StyledBackground>
             <StyledCenterContainer>
               <StyledTitle title={"Archive"} />
-              {loading ? (
-                <StyledLoadingText>Fetching Data...</StyledLoadingText>
-              ) : (
-                <Table props={data} />
-              )}
+                <Table props={cardData} />
             </StyledCenterContainer>
           </StyledBackground>
         </StyledPageWrapper>

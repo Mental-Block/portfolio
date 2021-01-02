@@ -1,5 +1,8 @@
 import React from "react";
-import { FeaturedCards, OtherCards } from "../components/Cards";
+import Cards from "../components/Cards";
+
+import cardData from "../cardData.json"
+
 
 // css
 import { ThemeProvider } from "styled-components";
@@ -14,6 +17,7 @@ import { StyledTitle } from "../components/css/Text";
 import { StyledList } from "../components/css/List";
 
 export const Projects = () => {
+
   return (
     <>
       <ThemeProvider theme={mainTheme}>
@@ -21,9 +25,9 @@ export const Projects = () => {
           <StyledBackground>
             <StyledCenterContainer>
               <StyledTitle title={"Featured Projects"} />
-              <FeaturedCards />
+              <Cards data={cardData.filter(({featured}) => featured === true)} />
               <StyledTitle title={"Other Projects"} />
-              <OtherCards />
+              <Cards data={cardData.filter(({featured}) => featured === false)}/>
               <StyledTitle title={"Skills"} />
               <StyledList>
                 <li>HTML </li>

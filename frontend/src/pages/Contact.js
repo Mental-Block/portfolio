@@ -17,20 +17,18 @@ export const Contact = () => {
   });
 
   const submit = async (data, e) => {
-    e.target.reset();
     e.preventDefault();
 
-    await fetch("/contact/", {
+   const res = await fetch("https://formspree.io/f/mrgooybp", {
       mode: "cors",
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      })
       .catch((err) => console.error(err));
+
+      if(res.ok === true) e.target.reset();
   };
 
   return (

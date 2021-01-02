@@ -27,7 +27,7 @@
     "featured":null},
 
     {"_id":"5fd680181076e17474ae5ce6",
-    "title":"Kitchen Inventory",
+    "title":"Kitchen Inv...",
     "year":"2020",
     "img":"images/kitchenInventory.png",
     "description":"Kitchen Inventory is a management site to help keep track of your inventory. Some of the site core features are login, data filtering and CRUD operations. ",
@@ -42,5 +42,15 @@
     "description":"Chicommerce is a hybrid website between a small business and an ecommerce website. It is a pure vanilla javascript SPA. Some of the sites core features are cart logic, contact form validation and dynamic routing.",
     "githubURL":"https://github.com/Mental-Block/Chicommerce",
     "netlifyURL":"https://chicommerce.netlify.app/",
-    "featured":true}
+    "featured":true},
+
+    {"_id":"5fd6824510pde17474ae5ce7",
+        "title":"BadIdeasGuy",
+        "year":"2020",
+        "img":"images/badideasguy.png",
+        "description":"Bad Ideas Guy is a blog site made with gatsby js. Some of the sites core features include data filtering, image proformance, search feature and is SEO friendly.",
+        "githubURL":"https://github.com/Mental-Block/blog",
+        "netlifyURL":"https://www.badideasguy.com/",
+        "featured":true
+    }
 ]

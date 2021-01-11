@@ -9,7 +9,7 @@ const Cards = ({...props}) => {
     {props.data.map((card) => (
         <StyledCard key={card._id}>
           <StyledCardTitleContainer>
-            <StyledCardTitle>{card.title}</StyledCardTitle>
+            <StyledCardTitle>{card.title.length < 13 ? card.title : card.title.slice(0, 12) + "..."}</StyledCardTitle>
             <StyledCardIconContainer>
               <a target="blank" href={card.githubURL}>
                 <StyledCardIcon src="images/github.svg" />

@@ -27,10 +27,10 @@
     "featured":null},
 
     {"_id":"5fd680181076e17474ae5ce6",
-    "title":"Kitchen Inv...",
+    "title":"Kitchen Inventory",
     "year":"2020",
     "img":"images/kitchenInventory.png",
-    "description":"Kitchen Inventory is a management site to help keep track of your inventory. Some of the site core features are login, data filtering and CRUD operations. ",
+    "description":"Kitchen Inventory is a management site to help keep track of your inventory. Some of the site core features are login, data filtering and CRUD operations. Username: test@gmail.com, Password: Test1234",
     "githubURL":"https://github.com/Mental-Block/kitchenInventory",
     "netlifyURL":"https://kitchen--inventory.herokuapp.com/",
     "featured":true},
@@ -44,13 +44,25 @@
     "netlifyURL":"https://chicommerce.netlify.app/",
     "featured":true},
 
-    {"_id":"5fd6824510pde17474ae5ce7",
-        "title":"BadIdeasGuy",
-        "year":"2020",
-        "img":"images/badideasguy.png",
-        "description":"Bad Ideas Guy is a blog site made with gatsby js. Some of the sites core features include data filtering, image proformance, search feature and is SEO friendly.",
-        "githubURL":"https://github.com/Mental-Block/blog",
-        "netlifyURL":"https://www.badideasguy.com/",
-        "featured":true
+    {
+    "_id":"5fd6824510pde17474ae5ce7",
+    "title":"BadIdeasGuy",
+    "year":"2020",
+    "img":"images/badideasguy.png",
+    "description":"Bad Ideas Guy is a blog site made with gatsby js. Some of the sites core features include data filtering, proformant image resizing, search feature and is SEO friendly.",
+    "githubURL":"https://github.com/Mental-Block/blog",
+    "netlifyURL":"https://www.badideasguy.com/",
+    "featured":true
+    },
+
+    {
+    "_id":"5fd682451023e17474ae5ce7",
+    "title":"Pet Cost",
+    "year":"2020",
+    "img": null,
+    "description":null,
+    "githubURL":"https://github.com/Mental-Block/petCost",
+    "netlifyURL":"https://splashley-pet-cost.netlify.app/",
+    "featured":null
     }
 ]

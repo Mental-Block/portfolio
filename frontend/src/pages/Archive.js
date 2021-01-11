@@ -31,24 +31,6 @@ export const Archive = () => {
 };
 
 const Table = ({ props }) => {
-  const tableInformation = props.map((prop) => {
-    return (
-      <tr key={prop._id}>
-        <td>{prop.year}</td>
-        <td>{prop.title}</td>
-        <td>
-          <a target="blank" href={prop.githubURL}>
-            Link
-          </a>
-        </td>
-        <td>
-          <a target="blank" href={prop.netlifyURL}>
-            Link
-          </a>
-        </td>
-      </tr>
-    );
-  });
 
   return (
     <>
@@ -61,15 +43,30 @@ const Table = ({ props }) => {
             <th>Live View</th>
           </tr>
 
-          {tableInformation}
+            {props.map((prop) => (
+              <tr key={prop._id}>
+                <td>{prop.year}</td>
+                <td>{prop.title}</td>
+                <td>
+                  <a target="blank" href={prop.githubURL}>
+                    Link
+                  </a>
+                </td>
+                <td>
+                  <a target="blank" href={prop.netlifyURL}>
+                    Link
+                  </a>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </StyledTable>
     </>
   );
 };
 
-const StyledTable = styled.table`
-  margin-top: 3rem;
+export const StyledTable = styled.table`
+  margin: 3rem 0;
   font-family: ${(props) => props.theme.primaryF};
   color: ${(props) => props.theme.thirdC};
   background: rgba(0, 0, 0, 0.5);

@@ -66,7 +66,7 @@ const Table = ({ props }) => {
 };
 
 export const StyledTable = styled.table`
-  margin: 3rem 0;
+  margin: 3rem 4rem;
   font-family: ${(props) => props.theme.primaryF};
   color: ${(props) => props.theme.thirdC};
   background: rgba(0, 0, 0, 0.5);

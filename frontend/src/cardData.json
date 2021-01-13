@@ -42,7 +42,7 @@
     "description":"Chicommerce is a hybrid website between a small business and an ecommerce website. It is a pure vanilla javascript SPA. Some of the sites core features are cart logic, contact form validation and dynamic routing.",
     "githubURL":"https://github.com/Mental-Block/Chicommerce",
     "netlifyURL":"https://chicommerce.netlify.app/",
-    "featured":true},
+    "featured":false},
 
     {
     "_id":"5fd6824510pde17474ae5ce7",

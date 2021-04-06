@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 // css
 import styled, { ThemeProvider } from "styled-components";
@@ -7,8 +8,10 @@ import { mainTheme } from "./css/Theme";
 import { flexSpace, flexCenter } from "./css/Layout";
 
 export const Header = () => {
+
   return (
     <>
+    
       <ThemeProvider theme={mainTheme}>
         <StyledNav>
           <Logo />
@@ -32,22 +35,28 @@ const Burger = () => {
         <div></div>
         <div></div>
       </StyledBurger>
-      <LinkWrapper toggleValue={toggleValue} />
+      <StyledFadeAnimation>
+        <SwitchTransition>
+          <CSSTransition key={toggleValue} classNames={"fade"} timeout={200}>
+            <LinkWrapper toggleValue={toggleValue} close={() => toggle(false)} />
+          </CSSTransition>
+        </SwitchTransition>
+      </StyledFadeAnimation>
     </>
   );
 };
 
-const LinkWrapper = ({ toggleValue }) => {
+const LinkWrapper = ({ toggleValue, close }) => {
   return (
     <>
       <StyledLinkWrapper toggleValue={toggleValue}>
-        <StyledLink exact to="/" activeStyle={{ color: mainTheme.primaryC }}>
+        <StyledLink exact to="/" onClick={close} activeStyle={{ color: mainTheme.primaryC }}>
           Home
         </StyledLink>
-        <StyledLink to="/projects" activeStyle={{ color: mainTheme.primaryC }}>
+        <StyledLink to="/projects" onClick={close} activeStyle={{ color: mainTheme.primaryC }}>
           Projects
         </StyledLink>
-        <StyledLink to="/contact" activeStyle={{ color: mainTheme.primaryC }}>
+        <StyledLink to="/contact" onClick={close} activeStyle={{ color: mainTheme.primaryC }}>
           Contact
         </StyledLink>
         <StyledLink as="a" href="/Resume.pdf" download>
@@ -77,12 +86,14 @@ const StyledNav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.75);
 `;
 
 const StyledLogo = styled.h1`
   position: relative;
+  margin: 0;
+  padding: 0;
   z-index: 1;
   width: 100px;
   text-align: center;
@@ -91,7 +102,7 @@ const StyledLogo = styled.h1`
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -1px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 800px) {
     width: 200px;
   }
 `;
@@ -101,9 +112,9 @@ const StyledLinkWrapper = styled.div`
   position: absolute;
   width: 100%;
   min-height: 200px;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   left: 0;
-  top: 117.5px;
+  top: 95.5px;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
@@ -114,7 +125,7 @@ const StyledLinkWrapper = styled.div`
     margin: 1rem 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 800px) {
     ${flexSpace}
     visibility: visible;
     background: none;
@@ -127,11 +138,11 @@ const StyledLinkWrapper = styled.div`
 `;
 
 const StyledBurger = styled.button`
-  position: relative;
+  position: absolute;
   background: none;
   border: none;
-  right: 0;
-  top: 0;
+  right: 2rem;
+  top: ${({ toggleValue }) => (toggleValue ? "3rem" : "2rem")};
   z-index: 1;
   display: block;
   width: auto;
@@ -155,13 +166,34 @@ const StyledBurger = styled.button`
   div:nth-child(2) {
     margin: 8px 0px;
     display: ${({ toggleValue }) => (toggleValue ? "none" : "block")};
+    
   }
 
   div:nth-child(3) {
     transform: ${({ toggleValue }) => (toggleValue ? "rotate(45deg)" : "")};
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 800px) {
     display: none;
   }
 `;
+
+const StyledFadeAnimation = styled.div`
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-enter-active {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+  }
+  .fade-enter-active,
+  .fade-exit-active {
+    transition: opacity 500ms;
+  }
+`;
+

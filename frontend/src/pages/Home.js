@@ -23,7 +23,7 @@ export const Home = () => {
             <StyledArrowShooting />
             <StyledHomeContainer>
               <StyledHomeText>
-                Hi, my name Is Aaron and I am a Front End Software Developer.
+                Hi, my name Is Aaron and I am a Software Developer.
               </StyledHomeText>
               <StyledLinkButton title="View Projects" link="/projects" />
             </StyledHomeContainer>

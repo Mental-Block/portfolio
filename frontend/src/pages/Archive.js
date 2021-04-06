@@ -66,6 +66,7 @@ const Table = ({ props }) => {
 };
 
 export const StyledTable = styled.table`
+  max-width: 100%;
   margin: 3rem 4rem;
   font-family: ${(props) => props.theme.primaryF};
   color: ${(props) => props.theme.thirdC};

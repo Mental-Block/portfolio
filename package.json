@@ -1,21 +1,39 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-gallery-carousel": "^0.2.4",
+    "react-hook-form": "^5.7.2",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.1.0"
+  },
   "scripts": {
-    "heroku-postbuild": "cd frontend && npm i && npm run build && cd ../backend && npm i",
-    "start": "cd backend && node server.js"
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mental-Block/portfolio.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mental-Block/portfolio/issues"
-  },
-  "homepage": "https://github.com/Mental-Block/portfolio#readme",
-  "dependencies": {}
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

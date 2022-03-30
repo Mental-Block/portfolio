@@ -73,16 +73,16 @@ const Burger = () => {
     in the DOM but is rendered so we need to subtract px so the hrefs match up 
     with the id's as I used a <div> on the first off and not <StyledScrollIdFix>*/
     const NAVIGATION_BAR_HEIGHT = 68; 
-    const START_HEIGHT = 0; // the height of the DOM when user first loads
+    const START_HEIGHT = -1; // the height of the DOM when user first loads since we use 
     const scrollY = window.scrollY;
 
     const scrollFixIds = Array.from(document.querySelectorAll('div[data-scroll-fix]'));
     const navLinks = Array.from(document.querySelectorAll('a[data-nav-link]'));
 
-    const getAllSectionHeights = scrollFixIds.map(id => getHTMLElementBoxHeight(id));
+    const allSectionHeights = scrollFixIds.map(id => getHTMLElementBoxHeight(id));
 
-    getAllSectionHeights[0] = (getAllSectionHeights[0] - NAVIGATION_BAR_HEIGHT); // I know I'm manipulating the orginal data please don't sue    
-    const sectionHeights = [START_HEIGHT, ...getAllSectionHeights];
+    allSectionHeights[0] = (allSectionHeights[0] - NAVIGATION_BAR_HEIGHT);
+    const sectionHeights = [START_HEIGHT, ...allSectionHeights];
 
       let newHeight = addPrevNum()
       let oldHeight = addPrevNum()
@@ -91,7 +91,7 @@ const Burger = () => {
         let bottomHeight = oldHeight(sectionHeights[index])
         let topHeight = newHeight(sectionHeights[index + 1])
 
-        if((scrollY >= bottomHeight) && (scrollY < topHeight)){
+        if((scrollY >= bottomHeight) && (scrollY <= topHeight)){
           if(!checkClassExists(navLinks[index], ACTIVE_NAV_LINK_CLASSNAME)){
             navLinks.map((link) => removeClass(link, ACTIVE_NAV_LINK_CLASSNAME))
           } 

@@ -1,19 +1,19 @@
 [    
     {
         "_id":"5fd68245dsa1023dsadsae17474ae5ce7",
-        "title":"SMT Calc",
+        "title":"SMT CALC",
         "year":"2021",
         "img": "images/smt-calc.png",
-        "description":"SMT Calc is a management website for weighting electronic components and duration length of an MSL's. It comes featured with json web token authentication, levels of authentication, CRUD functionality in a table format, fully responsive and filtering. Source code is not available. Demo's can be presented on request. ",
+        "description":"SMT CALC is a management website for mosture sensitive level (MSL) components. SMT CALC caculates the time of exposure when a component in on the shop floor, as well as recovery time for the component using IPC/JEDEC Standard J-STD-020.",
         "githubURL":"https://github.com/Mental-Block",
         "url":"https://smt-calc.com",
-        "tech": ["Html", "Less", "AntDesign", "React", "Webpack", "Babel", "Typescript", "Express", "Postgres", "TypeORM", "Docker", "Nginx", "NodeJS"]
+        "tech": ["Html", "Less", "AntDesign", "React", "Webpack", "Babel", "Typescript", "Express", "Postgres", "TypeORM", "NodeJS"]
     },
     {
         "_id":"5fd6824510pde17474ae5ce7",
         "title":"BadIdeasGuy",
         "img":"images/badideasguy.png",
-        "description":"Bad Ideas Guy is a blog site for my investment thoughts and idea's. It uses the Mailchimp api for sending email notifications to followers, routing and sorting of blog posts by tags, comment section using Disqus api, and a blog post feed.",
+        "description":"Bad Ideas Guy is a blog site for my investment thoughts and idea's. I wanted a place where I could share my stock picks with friends and family members. Hopefully improving my process along the way.",
         "githubURL":"https://github.com/Mental-Block/blog",
         "url":"https://www.badideasguy.com/",
         "tech": ["Html", "Css", "Javascript", "React", "Gastby", "Markdown", "NodeJS" ]
@@ -22,7 +22,7 @@
         "_id":"5fd680181076e17474ae5ce6",
         "title":"Kitchen Inventory",
         "img":"images/kitchenInventory.png",
-        "description":"Kitchen Inventory is a mock management site to help keep track of food inventory and expiration. It uses authentication, CRUD functionality, user settings and filtering. It is hosted on heroku; it might take a bit to boot up. The site is very unsecure so NO personal information when making an account. Logging in use Username: test@gmail.com, Password: Test1234",
+        "description":"Kitchen Inventory is a mock management site to help keep track of food inventory and expiration. It is hosted on heroku; it might take a bit to boot up. The site is very unsecure so NO personal information when making an account. Logging in use Username: test@gmail.com, Password: Test1234",
         "githubURL":"https://github.com/Mental-Block/kitchenInventory",
         "url":"https://kitchen--inventory.herokuapp.com/",
         "tech": ["Html", "Styled-Components", "Javascript", "React", "Webpack", "Babel", "Express", "Mongoose", "MongoDB", "NodeJS"]
@@ -31,18 +31,9 @@
         "_id":"5ed26999e21a3f1fdc637416",
         "title":"Tetris",
         "img":"images/tetris.png",
-        "description":" A recreation of the 1984 game of tetris. Some of the features are the start & pause button, score and progressing difficulty. This project was intended to get me familiar with Classes, object oriented programing and matrices.",
+        "description":" A recreation of the 1984 game of tetris. Some other features  I added are the start & pause button, score and progressing difficulty. This project was intended to get me familiar with Classes, object oriented programing and matrices.",
         "githubURL":"https://github.com/Mental-Block/Tetris",
         "url":"https://tetris100.netlify.app/",
         "tech": ["Html", "Css", "Javascript" ]
-    },
-    {
-        "_id":"5fd68245dsa1023e17474ae5ce7",
-        "title":"Tibben Masonry",
-        "img": "images/tibbenmasonry.png",
-        "description":"A small business website showing static information. It includes a contact form, fully responsive and has embeded google maps.",
-        "githubURL":"https://github.com/Mental-Block/tibbenMasonry",
-        "url":"https://tibbenmasonry.com",
-        "tech": ["Html", "Scss", "Javascript", "EJS", "Express", "NodeJS"]
     }
 ]   

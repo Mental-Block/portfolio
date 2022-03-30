@@ -23,7 +23,7 @@ const Skills = () => {
   const TECH_STACK = [{
     frontend: "Html",
     backend: "NodeJS (NPM)",
-    other: "GitHub"
+    other: "Git"
   },
   {
     frontend: "(S)css & Styled-Components",
@@ -43,7 +43,7 @@ const Skills = () => {
   {
     frontend: "WebPack",
     backend: "Mongoose",
-    other: "MacOS"
+    other: "Bash"
   }, 
   {
     frontend: "Babel",

@@ -378,7 +378,7 @@ export const StyledGlowingRowLeftFix = styled(StyledGlowingRowFix)`
 `
 
 export const StyledGlowingRowTopRightFix = styled(StyledGlowingRowFix)`
-  top:0;
+  top:10px;
   right: 0;
   width: 10px;
   height: 20px;
@@ -520,13 +520,12 @@ export const StyledInput = styled.input`
   width: 100%;
   border-radius: 4px;
   border: none;
-
   background-color: ${(props) => props.theme.thirdC};
   font-family: ${(props) => props.theme.secondaryF};
   color: #000000;
   resize: none;
   text-indent: 0.5rem;
-
+  outline: none;
   ::placeholder{
     color: ${props => props.theme.secondaryC}
   }
@@ -753,7 +752,6 @@ export const StyledNavBurger = styled.button`
   padding: 0;
   cursor: pointer;
   outline: none;
-
   :active > div, :hover > div {
       box-shadow: 0px 0px 1px ${(props) => props.theme.primaryC},
         0px 0px 1px ${(props) => props.theme.primaryC},

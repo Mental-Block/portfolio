@@ -28,27 +28,26 @@ const Skills = () => {
   {
     frontend: "(S)css & Styled-Components",
     backend: "Express",
-    other: "Eslint"
+    other: "Docker"
   },
   {
     frontend: "Javascript & Typscript",
     backend: "Postges",
-    other: "Prettier",
+    other: "Bash"
   },
   {
     frontend: "React",
     backend: "MongoDB",
-    other: "Docker"
+    other: 'BASIC'
   },
   {
     frontend: "WebPack",
     backend: "Mongoose",
-    other: "Bash"
+    other: "Linux"
   }, 
   {
     frontend: "Babel",
     backend: "TypeORM",
-    other: ""
   },
 ]
 

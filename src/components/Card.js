@@ -21,12 +21,13 @@ const Card = (props) => {
       <StyledCardTitleContainer>
         <StyledCardTitle>{props.title}</StyledCardTitle>
           <StyledCardIconContainer>
-              <StyledIconLink target="_blank" rel="noopener noreferrer" href={props.githubURL}>
+              {props.githubURL && <StyledIconLink target="_blank" rel="noopener noreferrer" href={props.githubURL}>
                 <StyledIcon src="images/github.svg" />
-              </StyledIconLink>
+              </StyledIconLink> }
+              { props.url &&
               <StyledIconLink target="_blank" rel="noopener noreferrer" href={props.url}>
                 <StyledIcon src="images/external-link.svg" />
-              </StyledIconLink>
+              </StyledIconLink> }
             </StyledCardIconContainer>
         </StyledCardTitleContainer>
         <StyledList display="inline-flex">

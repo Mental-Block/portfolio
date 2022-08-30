@@ -100,7 +100,7 @@ const Contact = () => {
                 maxLength: maxChars(40),
                 pattern: {
                     value: REGEX.email, 
-                    message: "This feild needs to be an email"
+                    message: "This field needs to be an email"
                 },
             },
             placeholder: "Johndoe@example.com",

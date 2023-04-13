@@ -4,7 +4,7 @@
         "title":"SMT CALC",
         "year":"2021",
         "img": "images/smt-calc.png",
-        "description":"SMT CALC is a management website for mosture sensitive components. SMT CALC caculates the exposure and recovery time of each component. Using IPC/JEDEC J-STD-020 and J-STD-033 standard. Currently, i'm working on component bake feature. username: guest  password: Guest123!",
+        "description":"SMT CALC is a management website for mosture sensitive components. SMT CALC caculates the exposure and recovery time of each component by scanning a barcode label with a unique id so when a component enters and leave the cabinet a time is recorded and calculations are made on the server using IPC/JEDEC standards. *Can't show code, under DNA",
         "url":"https://smt-calc.com",
         "tech": ["Html", "Less", "AntDesign", "React", "Webpack", "Babel", "Typescript", "Express", "Postgres", "TypeORM", "NodeJS"]
     },
@@ -14,17 +14,8 @@
         "img":"images/badideasguy.png",
         "description":"Bad Ideas Guy is a blog site for writing investment ideas. This project was to help solidify front end developer skills as well as intergrate 3rd party api's such as mail champ and Disqus. It also introduced simple search sorting and filtering.",
         "githubURL":"https://github.com/Mental-Block/blog",
-        "url":"https://www.badideasguy.com/",
+        "url":"https://badideasguy.netlify.app/",
         "tech": ["Html", "Css", "Javascript", "React", "Gastby", "Markdown", "NodeJS" ]
-    }, 
-    {
-        "_id":"5fd680181076e17474ae5ce6",
-        "title":"Kitchen Inventory",
-        "img":"images/kitchenInventory.png",
-        "description":"Kitchen Inventory is a mock investory management site to help keep track of food inventory. It is hosted on heroku so it might take a bit to boot up. The site is very unsecure. You can create a fake email and password to create an account. This project was to introduce me to databases and to continue developing frontend skills.",
-        "githubURL":"https://github.com/Mental-Block/kitchenInventory",
-        "url":"https://kitchen--inventory.herokuapp.com/",
-        "tech": ["Html", "Styled-Components", "Javascript", "React", "Webpack", "Babel", "Express", "Mongoose", "MongoDB", "NodeJS"]
     }, 
     {
         "_id":"5ed26999e21a3f1fdc637416",

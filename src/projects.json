@@ -4,7 +4,7 @@
         "title":"SMT CALC",
         "year":"2021",
         "img": "images/smt-calc.png",
-        "description":"SMT CALC is a management website for mosture sensitive components. SMT CALC caculates the exposure and recovery time of each component by scanning a barcode label with a unique id so when a component enters and leave the cabinet a time is recorded and calculations are made on the server using IPC/JEDEC standards. *Can't show code, under DNA",
+        "description":"SMT CALC is a management website for mosture sensitive components. SMT CALC caculates the exposure and recovery time of each component by scanning a barcode label with a unique id so when a component enters and leave the cabinet a time is recorded and calculations are made on the server using IPC/JEDEC standards.",
         "url":"https://smt-calc.com",
         "tech": ["Html", "Less", "AntDesign", "React", "Webpack", "Babel", "Typescript", "Express", "Postgres", "TypeORM", "NodeJS"]
     },

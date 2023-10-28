@@ -20,36 +20,39 @@ import {
 } from '../css'
 
 const Skills = () => {
-  const TECH_STACK = [{
-    frontend: "Html",
-    backend: "NodeJS (NPM)",
-    other: "Git"
-  },
-  {
-    frontend: "(S)css & Styled-Components",
-    backend: "Express",
-    other: "Docker"
-  },
-  {
-    frontend: "Javascript & Typscript",
-    backend: "Postges",
-    other: "Bash"
-  },
-  {
-    frontend: "React",
-    backend: "MongoDB",
-    other: 'BASIC'
-  },
-  {
-    frontend: "WebPack",
-    backend: "Mongoose",
-    other: "Linux"
-  }, 
-  {
-    frontend: "Babel",
-    backend: "TypeORM",
-  },
-]
+    const TECH_STACK = [{
+      frontend: "Html",
+      backend: "NodeJS (NPM)",
+      other: "Git"
+    },
+    {
+      frontend: "(S)css & Styled-Components",
+      backend: "Express",
+      other: "Docker"
+    },
+    {
+      frontend: "Javascript & Typscript",
+      backend: "Postges",
+      other: "Bash"
+    },
+    {
+      frontend: "React",
+      backend: "MongoDB",
+      other: 'BASIC'
+    },
+    {
+      frontend: "WebPack",
+      backend: "Mongoose",
+      other: "Linux"
+    }, 
+    {
+      frontend: "Babel",
+      backend: "TypeORM",
+    },
+    {
+      frontend: "Angular"
+    }
+  ]
 
     return (
         <>

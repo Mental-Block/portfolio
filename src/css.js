@@ -877,17 +877,18 @@ export const StyledListItem = styled.li`
 `
 
 export const StyledTitle = styled.h2`
-text-align: center;
-overflow-x: hidden;
-position: relative;
-font-weight: 600;
-font-size: ${(props) => props.sm ? "1.25rem" : "1.8rem" };
-margin: 1rem 0;
-color: ${(props) => props.theme.primaryC};
-font-family: ${(props) => props.theme.secondaryF};
-letter-spacing: 2px;
-word-spacing: 3px;
-text-transform: upperCase;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  font-weight: 600;
+  margin: 1rem 0;
+  font-size: ${(props) => props.sm ? "1.25rem" : "1.8rem" };
+  color: ${(props) => props.theme.primaryC};
+  font-family: ${(props) => props.theme.secondaryF};
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-transform: upperCase;
 `;
 
 export const StyledScrollIdFix = styled.div`

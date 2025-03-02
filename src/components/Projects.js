@@ -35,7 +35,7 @@ const Projects = () => {
 
           <StyledGlowingRow>
             <StyledGlowingRowLeftFix />
-            <StyledGlowingRowRightFix />
+            <StyledGlowingRowRightFix /> 
             <StyledFixRowGlowTopLeft />
 
             <StyledLeftArrow speed='1s' color="blue" style={{top: '15px'}}/>
